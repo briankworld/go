@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"golang.org/x/exp/slices"
+	"slices"
 )
 
 func main() {
@@ -27,4 +26,10 @@ func main() {
 	} else {
 		fmt.Printf("%d not found. It would be at index %d\n", target, index)
 	}
+
+	fmt.Println("Min", slices.Min(arr2))
+	fmt.Println("Max", slices.Max(arr2))
+
+	arr2 = slices.Delete(arr2, 1, 2)
+	fmt.Println("arr2", arr2)
 }
